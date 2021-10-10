@@ -118,3 +118,14 @@ del my_dict["A"]
 
 print(my_dict)
 # print(val)
+
+# множество (set)
+# неупорядоченная коллекция уникальных элементов
+
+# создание
+a = {1,2,3,1,2,3,1,2,3,4}
+
+b = {'hi, ha, hi, ha, ho'}
+
+c = set ('abracadabra')
+print(c)
