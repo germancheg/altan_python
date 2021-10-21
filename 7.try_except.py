@@ -79,27 +79,29 @@ def calculate(n1, n2, op):
         '-': lambda x, y: x - y,
         '*': lambda x, y: x * y,
         '/': lambda x, y: x / y,
+        '%': lambda x, y: x % y,
+        '**': lambda x, y: x ** y,
     }
     return d[op](n1, n2)
 
 while True:
     # ввод данных
-    cmd = input("Командуйте, сэр: ")
+    cmd = input("Дарова, братан: ")
     if cmd == "stop":
-        print("Bye bye !")
+        print("Давай удачи, чувак ")
         break
 
     try:
-        num_1 = int(input("Введите 1 число: "))
-        num_2 = int(input("Введите 2 число: "))
-        op = input("Введите символ операции: ")
+        num_1 = int(input("Вводи 1 число: "))
+        num_2 = int(input("Вводи 2 число: "))
+        op = input("Че ты хочешь сделать с ними?: ")
 
         # обработка данных
         result = calculate(num_1, num_2, op)
     except ZeroDivisionError:
-        result = "На ноль делить нельзя!"
+        result = "На ноль делить нельзя, не тупи !"
     except ValueError:
-        result = "Вы ввели не число!"
+        result = "ЧИСЛО АЛО !"
     finally:
         # вывод данных
         print(f"Результат: {result}")
