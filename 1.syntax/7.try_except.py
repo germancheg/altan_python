@@ -86,22 +86,22 @@ def calculate(n1, n2, op):
 
 while True:
     # ввод данных
-    cmd = input("Дарова, братан: ")
+    cmd = input("Добрый день, пользователь: ")
     if cmd == "stop":
-        print("Давай удачи, чувак ")
+        print("Хорошего дня вам! ")
         break
 
     try:
         num_1 = int(input("Вводи 1 число: "))
         num_2 = int(input("Вводи 2 число: "))
-        op = input("Че ты хочешь сделать с ними?: ")
+        op = input("Ваши действия?: ")
 
         # обработка данных
         result = calculate(num_1, num_2, op)
     except ZeroDivisionError:
-        result = "На ноль делить нельзя, не тупи !"
+        result = "На ноль делить нельзя !"
     except ValueError:
-        result = "ЧИСЛО АЛО !"
+        result = "Это не число !"
     finally:
         # вывод данных
         print(f"Результат: {result}")
